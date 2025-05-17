@@ -129,10 +129,10 @@ mvn clean install
 Clique em "Run" e aguarde o Tomcat subir na porta 8080.
 
 ### 📸 Print da Build
-![Build](prints/build-ok.png)
+![Build](Prints/Build-do-sistema.png)
 
 ### 📸 Print da Execução
-![Run](prints/run-ok.png)
+![Run](Prints/Execução-do-sistema.png)
 
 ---
 
@@ -142,7 +142,9 @@ Clique em "Run" e aguarde o Tomcat subir na porta 8080.
 - Confira as coleções `candidatos` e `votos`
 
 ### 📸 Print do Compass
-![Compass](prints/compass-votacao.png)
+![Compass](Prints/tabela-candidatos.png)
+
+![Compass](Prints/tabela-votos.png)
 
 ---
 
