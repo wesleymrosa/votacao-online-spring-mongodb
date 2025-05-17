@@ -5,12 +5,11 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- Herança do parent oficial do Spring Boot -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.5</version>
-		<relativePath/> <!-- Busca no repositório central -->
+		<relativePath/>
 	</parent>
 
 	<groupId>br.wesley.mongo_spring_lab</groupId>
@@ -23,10 +22,11 @@
 	<properties>
 		<java.version>17</java.version>
 		<springdoc.version>2.5.0</springdoc.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- ✅ evita erro de encoding -->
 	</properties>
 
 	<dependencies>
-		<!-- Spring Boot Starter Web -->
+		<!-- Web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -38,13 +38,11 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 
-		<!-- Jakarta Validation API -->
+		<!-- Validações -->
 		<dependency>
 			<groupId>jakarta.validation</groupId>
 			<artifactId>jakarta.validation-api</artifactId>
 		</dependency>
-
-		<!-- Hibernate Validator (provider real para validação funcionar) -->
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
@@ -57,7 +55,7 @@
 			<version>${springdoc.version}</version>
 		</dependency>
 
-		<!-- Lombok (opcional) -->
+		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -76,11 +74,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- Encoding fix para evitar erros com application.properties -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- Spring Boot build plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -95,5 +103,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
