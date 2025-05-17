@@ -1,4 +1,3 @@
-
 package br.wesley.mongo_spring_lab.votacao.dto;
 
 import jakarta.validation.constraints.NotBlank;
