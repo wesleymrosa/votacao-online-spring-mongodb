@@ -55,7 +55,8 @@ src/
 │   └── resources/
 │       └── application.properties
 ```
-
+### 📸 Print da estrutura do projeto no Intellij Idea
+![Intellij Idea](Prints/Estrutura-no-Intellij-idea.png)
 ---
 
 ## 🛠️ Banco de Dados
@@ -107,8 +108,13 @@ http://localhost:8080/swagger-ui.html
 }
 ```
 
-### 📸 Print dos Testes no Postman
-![Postman Testes](prints/postman-testes.png)
+### 📸 Prints dos Testes no Postman
+![Adicionar-candidato](prints/Adicionar-candidato.png)
+![Listar-todos-os-candidatos](prints/Listar-todos-os-candidatos.png)
+![Registrar-voto](prints/Registrar-voto.png)
+![Listar-todos-os-votos](prints/Listar-todos-os-votos.png)
+![Apurar-resultado-de-votação](prints/Apurar-resultado-de-votação.png)
+![Apurar-resultado-por-extenso](prints/Apurar-resultado-por-extenso.png)
 
 ---
 
