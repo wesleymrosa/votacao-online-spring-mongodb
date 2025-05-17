@@ -93,7 +93,7 @@ http://localhost:8080/swagger-ui.html
    - GET /api/votos/resultado-extenso
 
 ### 📸 Print do Swagger UI
-![Swagger](prints/swagger.jpeg)
+![Swagger](prints/swagger.png)
 
 ---
 
