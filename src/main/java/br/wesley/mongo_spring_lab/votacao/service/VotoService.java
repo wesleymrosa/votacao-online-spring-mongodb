@@ -63,4 +63,20 @@ public class VotoService {
                 .sorted(Comparator.comparingLong(ResultadoVotacaoDTO::getQuantidadeDeVotos).reversed())
                 .collect(Collectors.toList());
     }
+
+    public String gerarResultadoPorExtenso() {
+        List<ResultadoVotacaoDTO> resultados = this.apurarResultado();
+        return resultados.stream()
+                .map(r -> String.format(
+                        "Nome: %s, Partido: %s, Número: %d, Votos: %d, Percentual: %s;%n%s",
+                        r.getNome(),
+                        r.getPartido(),
+                        r.getNumero(),
+                        r.getQuantidadeDeVotos(),
+                        r.getPercentual(),
+                        ".".repeat(150)
+                ))
+                .collect(Collectors.joining(System.lineSeparator()));
+    }
+
 }

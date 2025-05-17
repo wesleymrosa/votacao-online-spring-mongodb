@@ -37,4 +37,8 @@ public class VotoController {
         return ResponseEntity.ok(resultado);
     }
 
+    @GetMapping("/resultado-extenso")
+    public ResponseEntity<String> resultadoPorExtenso() {
+        return ResponseEntity.ok(votoService.gerarResultadoPorExtenso());
+    }
 }
